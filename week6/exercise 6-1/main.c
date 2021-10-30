@@ -3,7 +3,7 @@
 #define FREQUENCY_SIZE 10
 
 int responses[RESPONSES_SIZE];
-int rating[FREQUENCY_SIZE] = {0};
+int frequency[FREQUENCY_SIZE] = {0};
 
 int main()
 {
@@ -27,7 +27,7 @@ int main()
             {
                 if (j == score)
                 {
-                    rating[j]++;
+                    frequency[j]++;
                 }
             }
         }
@@ -36,7 +36,7 @@ int main()
     printf("\nRating   Frequency\n");
     for (size_t i = 1; i <= FREQUENCY_SIZE; i++)
     {
-        printf("%6d%12d\n",i, rating[i]);
+        printf("%6d%12d\n",i, frequency[i]);
     }
 
     return 0;
