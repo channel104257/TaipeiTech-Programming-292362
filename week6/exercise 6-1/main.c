@@ -12,7 +12,7 @@ int main()
     for (size_t i = 1; i <= RESPONSES_SIZE; ++i)
     {
         printf("Please Enter The Responses %d (1 ~ 10) : ", i);
-        scanf("%d", &score);
+        scanf_s("%d", &score);
 
         if (score < 1 || score > 10)
         {
