@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+#define SIZE 20
+
+int answer[SIZE];
+int Solution[SIZE] = {1, 2, 3, 3, 4, 2, 3, 1, 2, 3, 4, 4, 2, 1, 1, 3, 3, 1, 2, 3};
+
+int main()
+{
+    int ans, count;
+    count = 0;
+
+    for (size_t i = 0; i < SIZE; i++)
+    {
+        printf("Please enter answer (1~4) %d :", i + 1);
+        scanf("%d", &ans);
+
+        answer[i] = ans;
+
+        if (answer[i] == Solution[i])
+        {
+            count++;
+        }
+    }
+    printf("Solution :");
+
+    for (size_t i = 0; i < SIZE; i++)
+    {
+        printf("%4d", Solution[i]);
+    }
+
+    printf("\n");
+
+    printf("Answer   :");
+
+    for (size_t i = 0; i < SIZE; i++)
+    {
+        printf("%4d", answer[i]);
+    }
+
+    printf("\n\n");
+
+    printf("Correct : %4d\n", count);
+    printf("False   : %4d", SIZE - count);
+
+    return 0;
+}
