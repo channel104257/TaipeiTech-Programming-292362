@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int etime[6] = {0};
+
+void star(int x);
+
+int main()
+{
+    int ans, times;
+
+    srand(time(NULL));
+
+    printf("Please enter how many times do you want to throw : ");
+    scanf("%d", &times);
+    printf("\n");
+
+    for (size_t i = 0; i < times; i++)
+    {
+        ans = 1 + (rand() % 6);
+
+        for (size_t j = 0; j < 6; j++)
+        {
+            if (ans == j + 1)
+            {
+                etime[j]++;
+                break;
+            }
+        }
+    }
+
+    printf("******************\n");
+    printf("       MODE\n");
+    printf("******************\n");
+    printf("Response  Frequency\t\tHistogram\n");
+    printf("                   \t\t         1    1    2    2\n");
+    printf("                   \t\t    5    0    5    0    5\n");
+    printf("       1          %d\t\t", etime[0]);star(etime[0]);printf("\n");
+    printf("       2          %d\t\t", etime[1]);star(etime[1]);printf("\n");
+    printf("       3          %d\t\t", etime[2]);star(etime[2]);printf("\n");
+    printf("       4          %d\t\t", etime[3]);star(etime[3]);printf("\n");
+    printf("       5          %d\t\t", etime[4]);star(etime[4]);printf("\n");
+    printf("       6          %d\t\t", etime[5]);star(etime[5]);printf("\n");
+
+    return 0;
+}
+
+void star(int x)
+{
+    for (size_t i = 0; i < x; i++)
+    {
+        printf("*");
+    }
+}
