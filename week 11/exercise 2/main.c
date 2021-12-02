@@ -36,7 +36,7 @@ int main()
 
 	Mul(ans, A, B);
 
-	printf("multiply of the matrix");
+	printf("multiply of the matrix\n");
 
 	for (int i = 0; i < level; i++)
 	{
