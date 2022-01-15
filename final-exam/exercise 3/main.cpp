@@ -1,3 +1,5 @@
+//快速陣列交換 https://www.796t.com/post/Nzh0N2U=.html
+
 #include <iostream>
 #include <algorithm>
 
